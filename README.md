@@ -15,11 +15,14 @@ Host if the service runs in isolated mode. Defaults to ```localhost```
 ### PORTALEN_CONTENT_PORT
 Port number if the service runs in isolated mode. Defaults to ```8000```
 
-### PORTALEN_CONTENT_REDIS_HOST
-URI for redis. Defaults to ```localhost```
+### PORTALEN_CONTENT_MONGODB_NAME
+Name for MongoDB database. Defaults to 'content'
 
-### PORTALEN_CONTENT_REDIS_PORT
-PORT for redis. Defaults to ```8000```
+### PORTALEN_CONTENT_MONGODB_HOST
+HOST for MongoDB. Defaults to ```localhost```
+
+### PORTALEN_CONTENT_MONGODB_PORT
+PORT for MongoDB. Defaults to ```27017```
 
 ## Messages handled
 
@@ -28,6 +31,8 @@ PORT for redis. Defaults to ```8000```
 Returns saved content for a user and/or a user's roles
 
 ```seneca.act({role: 'info', type:'user', user:user, roles:[roles]}, (error, data) => {})```
+
+```curl -d '{"role": "info", "type":"user", "user":"gasg", "roles": ["alle", "administrasjonen"]}' -v http://localhost:8000/act```
 
 ### ```info:info, type:info```
 Saves content of a given type for a given user
