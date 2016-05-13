@@ -1,6 +1,6 @@
 {
   "name": "portalen-content",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "Collect content for a user",
   "license": "MIT",
   "author": {
@@ -38,6 +38,6 @@
     "seneca-balance-client": "0.5.0",
     "seneca-entity": "0.0.1",
     "seneca-mesh": "0.7.0",
-    "seneca-redis-store": "0.0.8"
+    "seneca-mongo-store": "0.2.0"
   }
 }

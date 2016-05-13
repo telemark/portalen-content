@@ -16,10 +16,10 @@ var options = {
       {pin: 'info:info, type:info', model: 'observe'}
     ]
   },
-  redis: {
-    'redis-store': {
-      uri: 'redis://' + envs.PORTALEN_CONTENT_REDIS_HOST || 'localhost' + ':' + envs.PORTALEN_CONTENT_REDIS_PORT || 6379
-    }
+  mongodb: {
+    'name': envs.PORTALEN_CONTENT_MONGODB_NAME || 'content',
+    'host': envs.PORTALEN_CONTENT_MONGODB_HOST || 'localhost',
+    'port': envs.PORTALEN_CONTENT_MONGODB_PORT || '27017'
   },
   content: {
     url: envs.PORTALEN_CONTENT_URL || 'http://content.no'
@@ -38,5 +38,5 @@ if (envs.PORTALEN_CONTENT_ISOLATED) {
 }
 
 Service.use('entity')
-Service.use('redis-store', options.redis)
+Service.use('mongo-store', options.mongodb)
 Service.use(Content, options.content)
