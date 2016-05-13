@@ -17,9 +17,7 @@ var options = {
     ]
   },
   mongodb: {
-    'name': envs.PORTALEN_CONTENT_MONGODB_NAME || 'content',
-    'host': envs.PORTALEN_CONTENT_MONGODB_HOST || 'localhost',
-    'port': envs.PORTALEN_CONTENT_MONGODB_PORT || '27017'
+    'uri': envs.PORTALEN_CONTENT_MONGODB_URI || 'mongodb://localhost:27017/content'
   },
   content: {
     url: envs.PORTALEN_CONTENT_URL || 'http://content.no'

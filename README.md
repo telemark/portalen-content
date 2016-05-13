@@ -15,14 +15,8 @@ Host if the service runs in isolated mode. Defaults to ```localhost```
 ### PORTALEN_CONTENT_PORT
 Port number if the service runs in isolated mode. Defaults to ```8000```
 
-### PORTALEN_CONTENT_MONGODB_NAME
-Name for MongoDB database. Defaults to 'content'
-
-### PORTALEN_CONTENT_MONGODB_HOST
-HOST for MongoDB. Defaults to ```localhost```
-
-### PORTALEN_CONTENT_MONGODB_PORT
-PORT for MongoDB. Defaults to ```27017```
+### PORTALEN_CONTENT_MONGODB_URI
+URI for MongoDB database. Defaults to ```mongodb://localhost:27017/content```
 
 ## Messages handled
 
