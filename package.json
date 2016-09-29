@@ -14,7 +14,7 @@
   "homepage": "https://github.com/telemark/portalen-content",
   "main": "service.js",
   "engines": {
-    "node": ">=4.4.4"
+    "node": ">=4.6.0"
   },
   "scripts": {
     "test": "standard && tap --reporter=spec test/*.js",

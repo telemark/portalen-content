@@ -4,13 +4,14 @@
 #
 ###########################################################
 
-# Setting the base to nodejs 4.4.4
-FROM mhart/alpine-node:4.4.4
+# Setting the base to nodejs 4.6.0
+FROM mhart/alpine-node:4.6.0
 
 # Maintainer
 MAINTAINER Geir Gåsodden
 
 #### Begin setup ####
+
 
 # Installs git
 RUN apk add --update --no-cache git
