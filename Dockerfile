@@ -28,12 +28,5 @@ WORKDIR "/src"
 # Install dependencies
 RUN npm install --production
 
-# Env variables
-ENV PORTALEN_CONTENT_TAG portalen-content
-ENV PORTALEN_CONTENT_URL http://content.no
-ENV PORTALEN_CONTENT_HOST localhost
-ENV PORTALEN_CONTENT_PORT 8000
-ENV PORTALEN_CONTENT_MONGODB_URI mongodb://localhost:27017/content
-
 # Startup
 CMD ["node", "service.js", "--seneca-log=type:act"]
