@@ -28,10 +28,10 @@ Returns saved content for a user and/or a user's roles
 
 ```curl -d '{"role": "info", "type":"user", "user":"gasg", "roles": ["alle", "administrasjonen"]}' -v http://localhost:8000/act```
 
-### ```info:info, type:info```
+### ```role: info, info: content-collected```
 Saves content of a given type for a given user
 
-```seneca.act({info: 'info', type:'info', user:user}, (error, data) => {})```
+```seneca.act({role: 'info', info: 'content-collected', user:user}, (error, data) => {})```
 
 ## Messages emitted
 

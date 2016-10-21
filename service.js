@@ -13,7 +13,7 @@ var options = {
     auto: true,
     listen: [
       {pin: 'role: info, type: user', model: 'consume'},
-      {pin: 'role: info, cmd: content-collected', model: 'observe'}
+      {pin: 'role: info, info: content-collected', model: 'observe'}
     ]
   },
   mongodb: {
