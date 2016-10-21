@@ -12,8 +12,8 @@ var options = {
   mesh: {
     auto: true,
     listen: [
-      {pin: 'role:info, type:user', model: 'consume'},
-      {pin: 'info:info, type:info', model: 'observe'}
+      {pin: 'role: info, type: user', model: 'consume'},
+      {pin: 'role: info, cmd: content-collected', model: 'observe'}
     ]
   },
   mongodb: {
