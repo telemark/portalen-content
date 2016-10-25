@@ -35,6 +35,4 @@ if (envs.PORTALEN_CONTENT_ISOLATED) {
   Service.use(Mesh, options.mesh)
 }
 
-Service.use('entity')
-Service.use('mongo-store', options.mongodb)
 Service.use(Content, options.content)
