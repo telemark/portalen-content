@@ -7,6 +7,7 @@ var envs = process.env
 
 var options = {
   seneca: {
+    log: 'silent',
     tag: envs.PORTALEN_CONTENT_TAG || 'portalen-content'
   },
   mesh: {
