@@ -3,6 +3,7 @@
   "version": "3.0.3",
   "description": "Collect content for a user",
   "license": "MIT",
+  "private": true,
   "author": {
     "name": "Geir Gåsodden",
     "email": "geir.gasodden@pythonia.no",
