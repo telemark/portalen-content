@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/telemark/portalen-content.svg?branch=master)](https://travis-ci.org/telemark/portalen-content)
+[![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg?style=flat)](https://github.com/feross/standard)
 # portalen-content
 Collects content for portalen
 
@@ -21,14 +23,25 @@ Port number if the service runs in isolated mode. Defaults to ```8000```
 
 Returns saved content for a user and/or a user's roles
 
-```seneca.act({role: 'info', type:'user', user:user, roles:[roles]}, (error, data) => {})```
+```JavaScript
+seneca.act({role: 'info', type:'user', user:user, roles:[roles]}, (error, data) => {})
+```
 
-```curl -d '{"role": "info", "type":"user", "user":"gasg", "roles": ["alle", "administrasjonen"]}' -v http://localhost:8000/act```
+```bash
+curl -d '{"role": "info", "type":"user", "user":"gasg", "roles": ["alle", "administrasjonen"]}' -v http://localhost:8000/act
+```
 
 ### ```role: info, info: content-collected```
 Saves content of a given type for a given user
 
-```seneca.act({role: 'info', info: 'content-collected', user:user}, (error, data) => {})```
+```JavaScript
+seneca.act({role: 'info', info: 'content-collected', user:user}, (error, data) => {})
+```
+
+```bash
+curl -d '{"role": "info", "info": "content-collected", "type":"news", "user":"gasg", "data": ["alle", "administrasjonen"]}' -v http://localhost:8000/act
+```
+
 
 ## Messages emitted
 
@@ -36,4 +49,9 @@ Collects content for a user and/or a user's roles
 
 ### ```cmd: collect-info, type: user```
 
-```seneca.act({cmd: 'collect-info', type:'user', user:user, roles:[roles]}, (error, data) => {})```
+```JavaScript
+seneca.act({cmd: 'collect-info', type:'user', user:user, roles:[roles]}, (error, data) => {})
+```
+
+## License
+[MIT](LICENSE)
