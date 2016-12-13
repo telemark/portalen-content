@@ -28,7 +28,7 @@ seneca.act({role: 'info', type:'user', user:user, roles:[roles]}, (error, data) 
 ```
 
 ```bash
-curl -d '{"role": "info", "type":"user", "user":"gasg", "roles": ["alle", "administrasjonen"]}' -v http://localhost:8000/act
+$ curl -d '{"role": "info", "type":"user", "user":"gasg", "roles": ["alle", "administrasjonen"]}' -v http://localhost:8000/act
 ```
 
 ### ```role: info, info: content-collected```
@@ -39,7 +39,7 @@ seneca.act({role: 'info', info: 'content-collected', user:user}, (error, data) =
 ```
 
 ```bash
-curl -d '{"role": "info", "info": "content-collected", "type":"news", "user":"gasg", "data": ["alle", "administrasjonen"]}' -v http://localhost:8000/act
+$ curl -d '{"role":"info", "info":"content-collected", "data":{"user": "gasg", "type": "ad", "data": ["cool"]}}' -v http://localhost:8000/act
 ```
 
 
