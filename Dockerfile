@@ -28,4 +28,4 @@ WORKDIR "/src"
 RUN npm install --production
 
 # Startup
-CMD ["node", "service.js", "--seneca-log=type:act"]
+CMD ["node", "service.js"]
